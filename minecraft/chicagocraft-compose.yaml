@@ -16,7 +16,6 @@ services:
       FORCE_GAMEMODE: "true"
       MODE: "creative"
       VIEW_DISTANCE: 32
-      RESOURCE_PACK: "https://drive.google.com/file/d/1mzepRUHCGAFq6lbZIqdpE25nZl7iq7WD/view?usp=sharing"
       TYPE: "BUKKIT"
     image: itzg/minecraft-server
     tty: true
