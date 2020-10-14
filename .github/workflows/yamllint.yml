@@ -1,5 +1,5 @@
 ---
-name: Yamllint
+name: Lint
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  lint:
+  yamllint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,3 +18,9 @@ jobs:
         run: sudo apt install -y yamllint
       - name: Run yamllint
         run: yamllint .
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate Compose Files
+        run: find -name "*compose.yaml" -print0 | xargs -0 -n1 -I{} docker-compose -f {} config --services
