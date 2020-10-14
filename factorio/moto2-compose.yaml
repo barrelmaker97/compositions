@@ -1,11 +1,11 @@
 ---
-version: '3.7'
+version: "3.7"
 services:
   factorio:
     container_name: motofactorio2
     image: factoriotools/factorio
     ports:
-     - "34197:34197/udp"
+      - "34197:34197/udp"
     volumes:
       - type: bind
         source: /home/barrelmaker/gamedata/factorio/moto2-data
