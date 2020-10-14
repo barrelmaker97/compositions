@@ -1,7 +1,7 @@
 ---
 version: "3.7"
 services:
-  server:
+  niucraft2:
     container_name: niucraft2
     ports:
       - "25569:25565"

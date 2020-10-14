@@ -1,7 +1,7 @@
 ---
 version: "3.7"
 services:
-  factorio:
+  motofactorio2:
     container_name: motofactorio2
     image: factoriotools/factorio
     ports:

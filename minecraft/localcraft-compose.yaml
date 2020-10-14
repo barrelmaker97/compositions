@@ -1,7 +1,7 @@
 ---
 version: "3.7"
 services:
-  server:
+  localcraft:
     container_name: localcraft
     ports:
       - "25570:25565"
