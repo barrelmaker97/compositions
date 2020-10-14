@@ -10,7 +10,8 @@ on:
       - main
 
 jobs:
-  yamllint:
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +20,7 @@ jobs:
       - name: Run yamllint
         run: yamllint .
   validate:
+    name: Validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
