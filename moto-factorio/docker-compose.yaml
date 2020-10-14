@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  factorio:
+    container_name: motofactorio1
+    image: factoriotools/factorio
+    ports:
+     - "34197:34197/udp"
+    volumes:
+      - type: bind
+        source: /home/barrelmaker/gamedata/factorio/moto1-data
+        target: /factorio
+    restart: always

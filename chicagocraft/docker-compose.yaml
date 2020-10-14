@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  server:
+    container_name: chicagocraft
+    ports:
+      - "25568:25565"
+      - "8126:8123"
+    environment:
+      EULA: "TRUE"
+      DIFFICULTY: peaceful
+      OPS: Barrelmaker97
+      MEMORY: 2G
+      SERVER_NAME: ChicagoCraft
+      MOTD: "Welcome to the Second City"
+      SPAWN_PROTECTION: 0
+      FORCE_GAMEMODE: "true"
+      MODE: "creative"
+      VIEW_DISTANCE: 32
+      RESOURCE_PACK: "https://drive.google.com/file/d/1mzepRUHCGAFq6lbZIqdpE25nZl7iq7WD/view?usp=sharing"
+      TYPE: "BUKKIT"
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - type: bind
+        source: /home/barrelmaker/gamedata/minecraft/chicagocraft-data
+        target: /data

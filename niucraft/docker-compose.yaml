@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  server:
+    container_name: niucraft
+    ports:
+      - "25567:25565"
+    environment:
+      EULA: "TRUE"
+      DIFFICULTY: normal
+      OPS: Barrelmaker97
+      MEMORY: 1G
+      SERVER_NAME: NIUCraft
+      MOTD: "NIUCraft Server"
+      SPAWN_PROTECTION: 0
+      FORCE_GAMEMODE: "true"
+      TYPE: "BUKKIT"
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - type: bind
+        source: /home/barrelmaker/gamedata/minecraft/niucraft-data
+        target: /data

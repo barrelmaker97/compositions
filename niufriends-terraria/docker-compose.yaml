@@ -1,0 +1,19 @@
+version: '2.0'
+
+services:
+  terraria:
+    container_name: terraria
+    image: kaysond/docker-terraria
+    environment:
+      PUID: "2415"
+      PGID: "2415"
+    stdin_open: true
+    tty: true
+    ports:
+      - 7777:7777
+    volumes:
+      - /home/barrelmaker/gamedata/terraria/niufriends-data/world:/world
+      - /home/barrelmaker/gamedata/terraria/niufriends-data/config:/config
+    restart: always
+    tty: true
+    stdin_open: true

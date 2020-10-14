@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      TZ: America/Chicago
+      WATCHTOWER_CLEANUP: "true"
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    restart: always
