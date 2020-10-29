@@ -1,0 +1,19 @@
+---
+version: "3.7"
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    network_mode: host
+    environment:
+      ADMIN_EMAIL: "nolancooper97@gmail.com"
+      TZ: "America/Chicago"
+      WEB_PORT: 8000
+      WEBUIBOXEDLAYOUT: "traditional"
+      # WEBPASSWORD: 'set a secure password here or it will be random'
+    volumes:
+      - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
+      - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
