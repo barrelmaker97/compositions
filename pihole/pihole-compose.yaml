@@ -10,6 +10,7 @@ services:
       TZ: "America/Chicago"
       WEB_PORT: 8000
       WEBUIBOXEDLAYOUT: "traditional"
+      DNSMASQ_LISTENING: local
       # WEBPASSWORD: 'set a secure password here or it will be random'
     volumes:
       - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
