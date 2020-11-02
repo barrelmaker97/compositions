@@ -21,3 +21,13 @@ services:
         source: /volume1/docker/prometheus/prometheus.yml
         target: /etc/prometheus/prometheus.yml
     restart: unless-stopped
+  promscale:
+    container_name: promscale
+    image: timescale/promscale:latest
+    environment:
+      TS_PROM_DB_HOST: postgres
+    restart: unless-stopped
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    restart: unless-stopped
