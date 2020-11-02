@@ -1,0 +1,23 @@
+---
+version: "3.7"
+services:
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: /volume1/docker/grafana
+        target: /var/lib/grafana
+    restart: unless-stopped
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - type: bind
+        source: /volume1/docker/prometheus/prometheus.yml
+        target: /etc/prometheus/prometheus.yml
+    restart: unless-stopped
