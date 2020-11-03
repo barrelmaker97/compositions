@@ -25,26 +25,6 @@ services:
         source: /volume1/docker/prometheus/prometheus
         target: /prometheus
     restart: unless-stopped
-    #  promscale:
-    #    container_name: promscale
-    #    image: timescale/promscale:latest
-    #    environment:
-    #      TS_PROM_DB_HOST: timescaledb
-    #      TS_PROM_DB_PASSWORD: password
-    #      TS_PROM_DB_SSL_MODE: allow
-    #      TS_PROM_INSTALL_TIMESCALEDB: "false"
-    #    restart: unless-stopped
-    #  timescaledb:
-    #    container_name: timescaledb
-    #    image: timescale/timescaledb:latest-pg12
-    #    environment:
-    #      POSTGRES_PASSWORD: password
-    #      POSTGRES_DB: timescale
-    #    volumes:
-    #      - type: bind
-    #        source: /volume1/docker/timescaledb/data
-    #        target: /var/lib/postgresql/data
-    #    restart: unless-stopped
   node-exporter:
     container_name: node-exporter
     image: prom/node-exporter:latest
