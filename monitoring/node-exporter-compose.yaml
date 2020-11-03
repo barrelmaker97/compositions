@@ -1,0 +1,16 @@
+---
+version: "3.7"
+services:
+  node-exporter:
+    container_name: node-exporter
+    image: prom/node-exporter:latest
+    ports:
+      - "9100:9100"
+    command:
+      - "--path.rootfs=/host"
+    volumes:
+      - type: bind
+        source: /
+        target: /host
+        read_only: true
+    restart: unless-stopped
