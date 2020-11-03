@@ -11,6 +11,7 @@ services:
       WEB_PORT: 8000
       WEBUIBOXEDLAYOUT: "traditional"
       DNSMASQ_LISTENING: local
+      ServerIP: 192.168.1.151
     volumes:
       - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
       - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
