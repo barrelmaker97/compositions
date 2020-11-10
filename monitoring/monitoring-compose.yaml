@@ -9,6 +9,7 @@ services:
     environment:
       GF_DOMAIN: "grafana.barrelmaker.dev"
       GF_ROOT_URL: "https://grafana.barrelmaker.dev"
+      GF_ENFORCE_DOMAIN: "true"
       GF_ENABLE_GZIP: "true"
     volumes:
       - type: bind
