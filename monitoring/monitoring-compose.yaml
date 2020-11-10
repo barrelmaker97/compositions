@@ -13,7 +13,7 @@ services:
       GF_SERVER_ENABLE_GZIP: "true"
       GF_SECURITY_COOKIE_SECURE: "true"
       GF_SECURITY_COOKIE_SAMESITE: "strict"
-      GF_SECURITY_X_CONTENT_TYPE_OPTIONS: "true"
+      GF_SECURITY_X_CONTENT_TYPE_OPTIONS: "false"
     volumes:
       - type: bind
         source: /volume1/docker/grafana
