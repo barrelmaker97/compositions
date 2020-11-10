@@ -13,8 +13,6 @@ services:
       GF_SERVER_ENABLE_GZIP: "true"
       GF_SECURITY_COOKIE_SECURE: "true"
       GF_SECURITY_COOKIE_SAMESITE: "strict"
-      GF_SECURITY_STRICT_TRANSPORT_SECURITY: "true"
-      GF_SECURITY_STRICT_TRANSPORT_SECURITY_MAX_AGE_SECONDS: "63072000"
     volumes:
       - type: bind
         source: /volume1/docker/grafana
