@@ -6,6 +6,9 @@ services:
     image: grafana/grafana:latest
     ports:
       - "3000:3000"
+    environment:
+      GF_ROOT_URL: "https://grafana.barrelmaker.dev"
+      GF_ENABLE_GZIP: "true"
     volumes:
       - type: bind
         source: /volume1/docker/grafana
