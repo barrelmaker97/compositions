@@ -7,10 +7,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      GF_DOMAIN: "grafana.barrelmaker.dev"
-      GF_ROOT_URL: "https://grafana.barrelmaker.dev"
-      GF_ENFORCE_DOMAIN: "true"
-      GF_ENABLE_GZIP: "true"
+      GF_SERVER_DOMAIN: "grafana.barrelmaker.dev"
+      GF_SERVER_ROOT_URL: "https://grafana.barrelmaker.dev"
+      GF_SERVER_ENFORCE_DOMAIN: "true"
+      GF_SERVER_ENABLE_GZIP: "true"
     volumes:
       - type: bind
         source: /volume1/docker/grafana
