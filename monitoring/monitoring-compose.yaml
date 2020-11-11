@@ -44,3 +44,9 @@ services:
         target: /host
         read_only: true
     restart: unless-stopped
+  nut-exporter:
+    container_name: nut-exporter
+    image: ghcr.io/barrelmaker97/nut-exporter:latest
+    environment:
+      UPS_HOST: "pollux.lan"
+    restart: unless-stopped
