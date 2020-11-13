@@ -1,0 +1,23 @@
+---
+version: "3.7"
+services:
+  friendbot:
+    image: ghcr.io/barrelmaker97/friendbot:latest
+    container_name: friendbot
+    ports:
+      - "6000:6000"
+    environment:
+      FRIENDBOT_EXPORT_ZIP: /export.zip
+      FRIENDBOT_LOG_LEVEL: info
+      FRIENDBOT_REDIS_HOST: redis
+      FRIENDBOT_REDIS_PORT: 6379
+    volumes:
+      - type: bind
+        source: /volume1/docker/friendbot/export.zip
+        target: /export.zip
+        read_only: true
+    restart: unless-stopped
+  redis:
+    image: "redis:alpine"
+    container_name: redis
+    restart: unless-stopped
