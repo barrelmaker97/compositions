@@ -50,3 +50,12 @@ services:
     environment:
       UPS_HOST: "pollux.lan"
     restart: unless-stopped
+  pihole-exporter:
+    container_name: pihole-exporter
+    image: ekofr/pihole-exporter:latest
+    environment:
+      PIHOLE_HOSTNAME: 192.168.1.132
+      PIHOLE_PASSWORD: ${PIHOLE_PASSWORD:?PIHOLE_PASSWORD variable was not set}
+      INTERVAL: 15s
+      PORT: 9167
+    restart: unless-stopped
