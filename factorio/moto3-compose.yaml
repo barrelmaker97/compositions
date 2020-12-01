@@ -3,7 +3,7 @@ version: "3.7"
 services:
   motofactorio3:
     container_name: motofactorio3
-    image: factoriotools/factorio
+    image: factoriotools/factorio:1.0
     ports:
       - "34197:34197/udp"
     volumes:
