@@ -32,6 +32,8 @@ services:
       - type: bind
         source: /volume1/docker/prometheus/prometheus
         target: /prometheus
+    command:
+      - "--storage.tsdb.retention.time=6m"
     restart: unless-stopped
   node-exporter:
     container_name: node-exporter
