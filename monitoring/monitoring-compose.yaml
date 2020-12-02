@@ -25,6 +25,8 @@ services:
   renderer:
     container_name: grafana-image-renderer
     image: grafana/grafana-image-renderer:latest
+    environment:
+      LOG_LEVEL: "debug"
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
