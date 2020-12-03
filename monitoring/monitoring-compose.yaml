@@ -1,6 +1,7 @@
 ---
 version: "3.7"
 services:
+
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
@@ -23,11 +24,13 @@ services:
         source: /volume1/docker/grafana
         target: /var/lib/grafana
     restart: unless-stopped
+
   renderer:
     container_name: grafana-image-renderer
     image: grafana/grafana-image-renderer:latest
     environment:
       LOG_LEVEL: "debug"
+
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
@@ -48,6 +51,7 @@ services:
       - "--web.console.templates=/usr/share/prometheus/consoles"
       - "--storage.tsdb.retention.time=26w"
     restart: unless-stopped
+
   node-exporter:
     container_name: node-exporter
     image: prom/node-exporter:latest
@@ -59,12 +63,14 @@ services:
         target: /host
         read_only: true
     restart: unless-stopped
+
   nut-exporter:
     container_name: nut-exporter
     image: ghcr.io/barrelmaker97/nut-exporter:latest
     environment:
       UPS_HOST: "pollux.lan"
     restart: unless-stopped
+
   pihole-exporter:
     container_name: pihole-exporter
     image: ekofr/pihole-exporter:latest
