@@ -25,18 +25,19 @@ services:
         target: /var/lib/grafana
     restart: unless-stopped
 
-  loki:
-    container_name: loki
-    image: grafana/loki:latest
-    ports:
-      - "3100:3100"
-    command: -config.file=/etc/loki/local-config.yaml
+  # loki:
+  #   container_name: loki
+  #   image: grafana/loki:latest
+  #   ports:
+  #     - "3100:3100"
+  #   command: -config.file=/etc/loki/local-config.yaml
 
   renderer:
     container_name: grafana-image-renderer
     image: grafana/grafana-image-renderer:latest
     environment:
       LOG_LEVEL: "debug"
+      BROWSER_TZ: "America/Chicago"
 
   prometheus:
     container_name: prometheus
