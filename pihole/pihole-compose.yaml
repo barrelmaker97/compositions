@@ -28,9 +28,9 @@ services:
       ServerIP: 192.168.1.99
       DNS1: "192.168.1.98#5335"
       DNS2: "192.168.1.98#5335"
-#   volumes:
-#     - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
-#     - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
+    volumes:
+      - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
+      - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
     restart: unless-stopped
 
 networks:
