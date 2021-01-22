@@ -26,9 +26,15 @@ services:
       ADMIN_EMAIL: "nolancooper97@gmail.com"
       TZ: "America/Chicago"
       WEBUIBOXEDLAYOUT: "traditional"
-      ServerIP: 192.168.1.99
+      DNSMASQ_LISTENING: local
       VIRTUAL_HOST: pihole.lan
       WEBPASSWORD: ""
+      DNS_FQDN_REQUIRED: "false"
+      DNS_BOGUS_PRIV: "false"
+      ServerIP: 192.168.1.99
+#   volumes:
+#     - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
+#     - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
     restart: unless-stopped
 
 networks:
