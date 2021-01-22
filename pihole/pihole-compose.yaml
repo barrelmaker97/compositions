@@ -16,12 +16,6 @@ services:
     dns:
       - 127.0.0.1
       - 1.1.1.1
-    ports:
-      - 443/tcp
-      - 53/tcp
-      - 53/udp
-      - 67/udp
-      - 80/tcp
     environment:
       ADMIN_EMAIL: "nolancooper97@gmail.com"
       TZ: "America/Chicago"
