@@ -6,6 +6,7 @@ services:
     ports:
       - "25569:25565"
       - "8123:8123"
+      - "9225:9225"
     environment:
       EULA: "TRUE"
       DIFFICULTY: normal
