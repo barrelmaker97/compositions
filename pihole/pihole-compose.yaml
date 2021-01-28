@@ -25,6 +25,7 @@ services:
       WEBPASSWORD: ""
       DNS_FQDN_REQUIRED: "false"
       DNS_BOGUS_PRIV: "false"
+      SKIPGRAVITYONBOOT: 1
       ServerIP: 192.168.1.99
       DNS1: "192.168.1.98#5335"
       DNS2: "192.168.1.98#5335"
