@@ -14,10 +14,6 @@ scrape_configs:
         labels:
           node_name: "Pollux"
       - targets:
-          - "castor.lan:9100"
-        labels:
-          node_name: "Castor"
-      - targets:
           - "192.168.1.1:9100"
         labels:
           node_name: "Router"
