@@ -1,0 +1,40 @@
+---
+version: "2"
+
+services:
+  watchtower:
+    extends:
+      file: ../watchtower/watchtower-compose.yaml
+      service: watchtower
+  friendbot:
+    extends:
+      file: ../friendbot/friendbot-compose.yaml
+      service: friendbot
+  redis:
+    extends:
+      file: ../friendbot/friendbot-compose.yaml
+      service: redis
+  grafana:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: grafana
+  renderer:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: grafana
+  prometheus:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: prometheus
+  nut-exporter:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: nut-exporter
+  node-exporter:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: node-exporter
+  jellyfin:
+    extends:
+      file: ../media/media-compose.yaml
+      service: jellyfin
