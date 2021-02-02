@@ -49,7 +49,7 @@ scrape_configs:
   - job_name: "friendbot"
     static_configs:
       - targets:
-          - "soteria.lan:6000"
+          - "friendbot:6000"
 
   - job_name: "minecraft"
     static_configs:
