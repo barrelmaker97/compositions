@@ -10,7 +10,7 @@ services:
       EULA: "TRUE"
       DIFFICULTY: normal
       OPS: Barrelmaker97
-      MEMORY: 1G
+      MEMORY: 2G
       SERVER_NAME: MotoCraft
       MOTD: "MotoCraft Server"
       SPAWN_PROTECTION: 0

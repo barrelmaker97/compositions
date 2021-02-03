@@ -14,3 +14,7 @@ services:
     extends:
       file: ../minecraft/niucraft2-compose.yaml
       service: niucraft2
+  motocraft:
+    extends:
+      file: ../minecraft/motocraft-compose.yaml
+      service: motocraft
