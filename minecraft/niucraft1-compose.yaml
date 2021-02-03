@@ -2,18 +2,19 @@
 version: "3.7"
 services:
   niucraft1:
-    container_name: niucraft
+    container_name: niucraft1
     ports:
       - "25567:25565"
     environment:
       EULA: "TRUE"
       DIFFICULTY: normal
       OPS: Barrelmaker97
-      MEMORY: 1G
-      SERVER_NAME: NIUCraft
-      MOTD: "NIUCraft Server"
+      MEMORY: 2G
+      SERVER_NAME: NIUCraft1
+      MOTD: "NIUCraft Server #1"
       SPAWN_PROTECTION: 0
       FORCE_GAMEMODE: "true"
+      VIEW_DISTANCE: 32
       TYPE: "BUKKIT"
     image: itzg/minecraft-server
     tty: true
