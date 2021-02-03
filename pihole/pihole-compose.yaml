@@ -5,14 +5,7 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
-    hostname: pihole
-    domainname: lan
-    mac_address: d0:ca:ab:cd:ef:01
-    cap_add:
-      - NET_ADMIN
-    networks:
-      pihole_network:
-        ipv4_address: 192.168.1.99
+    network_mode: host
     dns:
       - 127.0.0.1
       - 1.1.1.1
@@ -26,21 +19,10 @@ services:
       DNS_FQDN_REQUIRED: "false"
       DNS_BOGUS_PRIV: "false"
       SKIPGRAVITYONBOOT: 1
-      ServerIP: 192.168.1.99
-      DNS1: "192.168.1.98#5335"
-      DNS2: "192.168.1.98#5335"
+      ServerIP: 192.168.1.151
+      DNS1: "127.0.0.1#5335"
+      DNS2: "127.0.0.1#5335"
     volumes:
       - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
       - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
     restart: unless-stopped
-
-networks:
-  pihole_network:
-    driver: macvlan
-    driver_opts:
-      parent: eth0
-    ipam:
-      config:
-        - subnet: 192.168.1.0/24
-          gateway: 192.168.1.1
-          ip_range: 192.168.1.99/29
