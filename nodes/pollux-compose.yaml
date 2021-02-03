@@ -1,0 +1,12 @@
+---
+version: "2"
+
+services:
+  watchtower:
+    extends:
+      file: ../watchtower/watchtower-compose.yaml
+      service: watchtower
+  node-exporter:
+    extends:
+      file: ../monitoring/node-exporter-compose.yaml
+      service: node-exporter
