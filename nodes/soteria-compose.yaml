@@ -21,7 +21,7 @@ services:
   renderer:
     extends:
       file: ../monitoring/monitoring-compose.yaml
-      service: grafana
+      service: renderer
   prometheus:
     extends:
       file: ../monitoring/monitoring-compose.yaml
