@@ -18,3 +18,7 @@ services:
     extends:
       file: ../minecraft/motocraft-compose.yaml
       service: motocraft
+  motofactorio3:
+    extends:
+      file: ../factorio/moto3-compose.yaml
+      service: motofactorio3
