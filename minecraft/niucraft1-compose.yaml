@@ -16,6 +16,7 @@ services:
       FORCE_GAMEMODE: "true"
       VIEW_DISTANCE: 32
       TYPE: "BUKKIT"
+      TZ: America/Chicago
     image: itzg/minecraft-server
     tty: true
     stdin_open: true

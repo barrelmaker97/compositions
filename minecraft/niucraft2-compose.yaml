@@ -19,6 +19,7 @@ services:
       VIEW_DISTANCE: 32
       SEED: WLLBYUG
       TYPE: "BUKKIT"
+      TZ: America/Chicago
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
