@@ -13,7 +13,7 @@ services:
       FRIENDBOT_REDIS_PORT: 6379
     volumes:
       - type: bind
-        source: /volume1/docker/friendbot/export.zip
+        source: /home/barrelmaker/export.zip
         target: /export.zip
         read_only: true
     restart: unless-stopped
