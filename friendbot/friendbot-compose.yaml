@@ -11,10 +11,15 @@ services:
       FRIENDBOT_LOG_LEVEL: info
       FRIENDBOT_REDIS_HOST: redis
       FRIENDBOT_REDIS_PORT: 6379
+      FRIENDBOT_SECRET_FILE: /friendbot-secret
     volumes:
       - type: bind
         source: /home/barrelmaker/export.zip
         target: /export.zip
+        read_only: true
+      - type: bind
+        source: /home/barrelmaker/friendbot-secret
+        target: /friendbot-secret
         read_only: true
     restart: unless-stopped
   redis:
