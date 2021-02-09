@@ -6,14 +6,6 @@ services:
     extends:
       file: ../watchtower/watchtower-compose.yaml
       service: watchtower
-  friendbot:
-    extends:
-      file: ../friendbot/friendbot-compose.yaml
-      service: friendbot
-  redis:
-    extends:
-      file: ../friendbot/friendbot-compose.yaml
-      service: redis
   grafana:
     extends:
       file: ../monitoring/monitoring-compose.yaml
