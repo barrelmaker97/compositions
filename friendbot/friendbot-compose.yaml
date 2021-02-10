@@ -12,6 +12,7 @@ services:
       FRIENDBOT_REDIS_HOST: redis
       FRIENDBOT_REDIS_PORT: 6379
       FRIENDBOT_SECRET_FILE: /friendbot-secret
+      TZ: America/Chicago
     volumes:
       - type: bind
         source: /home/barrelmaker/export.zip
