@@ -49,7 +49,7 @@ scrape_configs:
   - job_name: "friendbot"
     static_configs:
       - targets:
-          - "ares.lan:6000"
+          - "friendbot.barrelmaker.dev"
 
   - job_name: "minecraft"
     static_configs:
