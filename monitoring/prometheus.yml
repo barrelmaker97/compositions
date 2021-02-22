@@ -54,6 +54,6 @@ scrape_configs:
   - job_name: "minecraft"
     static_configs:
       - targets:
-          - "ares.lan:9225"
+          - "niucraft2.barrelmaker.dev"
         labels:
           server_name: "NIUCraft2"
