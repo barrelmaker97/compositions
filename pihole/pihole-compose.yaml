@@ -14,7 +14,6 @@ services:
       TZ: "America/Chicago"
       WEBUIBOXEDLAYOUT: "traditional"
       DNSMASQ_LISTENING: local
-      VIRTUAL_HOST: pihole.lan
       WEBPASSWORD: ""
       DNS_FQDN_REQUIRED: "false"
       DNS_BOGUS_PRIV: "false"
