@@ -10,23 +10,3 @@ services:
     extends:
       file: ../monitoring/node-exporter-compose.yaml
       service: node-exporter
-  niucraft2:
-    extends:
-      file: ../minecraft/niucraft2-compose.yaml
-      service: niucraft2
-  motocraft:
-    extends:
-      file: ../minecraft/motocraft-compose.yaml
-      service: motocraft
-  motofactorio3:
-    extends:
-      file: ../factorio/moto3-compose.yaml
-      service: motofactorio3
-  friendbot:
-    extends:
-      file: ../friendbot/friendbot-compose.yaml
-      service: friendbot
-  redis:
-    extends:
-      file: ../friendbot/friendbot-compose.yaml
-      service: redis
