@@ -26,5 +26,3 @@ jobs:
       - uses: actions/checkout@v2
       - name: Validate Compose Files
         run: find -name "*compose.yaml" -print0 | xargs -0 -n1 -I{} docker-compose -f {} config --services
-        env:
-          PIHOLE_PASSWORD: notarealpassword
