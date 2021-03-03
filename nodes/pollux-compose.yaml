@@ -10,3 +10,7 @@ services:
     extends:
       file: ../monitoring/node-exporter-compose.yaml
       service: node-exporter
+  pihole:
+    extends:
+      file: ../pihole/pihole-compose.yaml
+      service: pihole
