@@ -15,13 +15,13 @@ docker-compose -f <directory>/<compose-file> up -d
 - Docker
 - Docker Compose
 
-### Setup Docker
+### Install Docker
 
-For setting up Docker, refer to the [Docker installation guide](https://docs.docker.com/get-docker/).
+To install Docker, refer to the [Docker install guide](https://docs.docker.com/get-docker/).
 
 ### Install Docker Compose
 
-Compose is a tool for defining and running multi-container Docker applications. A compose file is used to configure your application’s services.
+Docker Compose is a tool for defining and running multi-container Docker applications. A compose file is used to configure your application’s services.
 
 To install Docker Compose, refer to the [Docker Compose install guide](https://docs.docker.com/compose/install/).
 
@@ -41,7 +41,7 @@ Please refer to the [Command Line Reference](https://docs.docker.com/compose/ref
 
 Useful Docker Compose Commands:
 * Install a compose file, detached from the terminal: `docker-compose -f <compose-file> up -d`
-* Delete a deployment: `docker compose -f <compose-file> down`
+* Delete a deployment: `docker-compose -f <compose-file> down`
 * Pull latest images: `docker-compose -f <compose-file> pull`
 
 # License
