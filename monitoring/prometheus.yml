@@ -57,3 +57,7 @@ scrape_configs:
           - "niucraft2.barrelmaker.dev"
         labels:
           server_name: "NIUCraft2"
+      - targets:
+          - "motocraft.barrelmaker.dev"
+        labels:
+          server_name: "MotoCraft"
