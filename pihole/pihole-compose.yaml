@@ -18,7 +18,7 @@ services:
       DNS_FQDN_REQUIRED: "false"
       DNS_BOGUS_PRIV: "false"
       SKIPGRAVITYONBOOT: 1
-      ServerIP: 192.168.20.40
+      ServerIP: 192.168.15.30
       DNS1: "127.0.0.1#5335"
       DNS2: "127.0.0.1#5335"
     volumes:
