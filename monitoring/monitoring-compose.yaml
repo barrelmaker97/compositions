@@ -1,5 +1,5 @@
 ---
-version: "3.7"
+version: "2"
 services:
 
   grafana:
@@ -20,9 +20,7 @@ services:
       GF_EXTERNAL_IMAGE_STORAGE_PROVIDER: "local"
       GF_LOG_FILTERS: "rendering:debug"
     volumes:
-      - type: bind
-        source: /volume1/docker/grafana
-        target: /var/lib/grafana
+      - "/volume1/docker/grafana:/var/lib/grafana"
     restart: unless-stopped
 
   # loki:
@@ -45,13 +43,8 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - type: bind
-        source: ./prometheus.yml
-        target: /etc/prometheus/prometheus.yml
-        read_only: true
-      - type: bind
-        source: /volume1/docker/prometheus/prometheus
-        target: /prometheus
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+      - "/volume1/docker/prometheus/prometheus:/prometheus"
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
@@ -66,10 +59,7 @@ services:
     command:
       - "--path.rootfs=/host"
     volumes:
-      - type: bind
-        source: /
-        target: /host
-        read_only: true
+      - "/:/host:ro"
     restart: unless-stopped
 
   nut-exporter:
