@@ -57,7 +57,7 @@ services:
       - "--storage.tsdb.path=/prometheus"
       - "--web.console.libraries=/usr/share/prometheus/console_libraries"
       - "--web.console.templates=/usr/share/prometheus/consoles"
-      - "--storage.tsdb.retention.time=26w"
+      - "--storage.tsdb.retention.time=90d"
     restart: unless-stopped
 
   node-exporter:
