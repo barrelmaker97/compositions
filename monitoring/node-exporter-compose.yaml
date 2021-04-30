@@ -1,5 +1,5 @@
 ---
-version: "3.7"
+version: "2"
 services:
   node-exporter:
     container_name: node-exporter
@@ -9,8 +9,5 @@ services:
     command:
       - "--path.rootfs=/host"
     volumes:
-      - type: bind
-        source: /
-        target: /host
-        read_only: true
+      - "/:/host:ro"
     restart: unless-stopped
