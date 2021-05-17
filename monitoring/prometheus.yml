@@ -14,7 +14,7 @@ scrape_configs:
         labels:
           node_name: "Pollux"
       - targets:
-          - "192.168.15.1:9100"
+          - "openwrt.lan:9100"
         labels:
           node_name: "Router"
       - targets:
