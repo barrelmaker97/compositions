@@ -18,7 +18,7 @@ scrape_configs:
         labels:
           node_name: "Router"
       - targets:
-          - "node-exporter:9100"
+          - "soteria.lan:9100"
         labels:
           node_name: "Soteria"
 
