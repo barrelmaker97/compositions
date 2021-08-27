@@ -57,3 +57,10 @@ scrape_configs:
           - "motocraft.barrelmaker.dev"
         labels:
           server_name: "MotoCraft"
+
+  - job_name: "factorio"
+    static_configs:
+      - targets:
+          - "motofactorio4.barrelmaker.dev"
+        labels:
+          server_name: "MotoFactorio4"
