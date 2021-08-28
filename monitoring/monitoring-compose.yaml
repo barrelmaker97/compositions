@@ -78,4 +78,4 @@ services:
       - "3001:3001"
     restart: unless-stopped
     volumes:
-      - "/volume1/docker/kuma:/app/data
+      - "/volume1/docker/kuma:/app/data"
