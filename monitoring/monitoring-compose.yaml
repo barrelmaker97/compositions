@@ -70,3 +70,12 @@ services:
     environment:
       UPS_HOST: "pollux.lan"
     restart: unless-stopped
+
+  kuma:
+    container_name: kuma
+    image: louislam/uptime-kuma:latest
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    volumes:
+      - "/volume1/docker/kuma:/app/data"
