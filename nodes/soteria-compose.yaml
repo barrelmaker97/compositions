@@ -26,3 +26,7 @@ services:
     extends:
       file: ../monitoring/monitoring-compose.yaml
       service: node-exporter
+  kuma:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: kuma
