@@ -14,7 +14,7 @@ services:
       TZ: "America/Chicago"
       WEBUIBOXEDLAYOUT: "traditional"
       DNSMASQ_LISTENING: local
-      WEBPASSWORD: ""
+      WEBPASSWORD: ${WEBPASSWORD:?Must set WEBPASSWORD}
       DNS_FQDN_REQUIRED: "false"
       DNS_BOGUS_PRIV: "false"
       SKIPGRAVITYONBOOT: 1
