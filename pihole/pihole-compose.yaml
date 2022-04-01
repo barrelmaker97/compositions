@@ -25,4 +25,6 @@ services:
     volumes:
       - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
       - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
+    cap_add:
+      - NET_ADMIN
     restart: unless-stopped
