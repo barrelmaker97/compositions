@@ -15,10 +15,7 @@ services:
       GF_SECURITY_COOKIE_SECURE: "true"
       GF_SECURITY_COOKIE_SAMESITE: "strict"
       GF_SECURITY_X_CONTENT_TYPE_OPTIONS: "false"
-      GF_RENDERING_SERVER_URL: "http://renderer:8081/render"
-      GF_RENDERING_CALLBACK_URL: "http://grafana:3000/"
       GF_EXTERNAL_IMAGE_STORAGE_PROVIDER: "local"
-      GF_LOG_FILTERS: "rendering:debug"
     volumes:
       - "/volume1/docker/grafana:/var/lib/grafana"
     restart: unless-stopped
@@ -29,13 +26,6 @@ services:
   #   ports:
   #     - "3100:3100"
   #   command: -config.file=/etc/loki/local-config.yaml
-
-  renderer:
-    container_name: grafana-image-renderer
-    image: grafana/grafana-image-renderer:latest
-    environment:
-      LOG_LEVEL: "debug"
-      BROWSER_TZ: "America/Chicago"
 
   prometheus:
     container_name: prometheus
