@@ -10,14 +10,14 @@ services:
     extends:
       file: ../monitoring/monitoring-compose.yaml
       service: grafana
-  renderer:
-    extends:
-      file: ../monitoring/monitoring-compose.yaml
-      service: renderer
   prometheus:
     extends:
       file: ../monitoring/monitoring-compose.yaml
       service: prometheus
+  alertmanager:
+    extends:
+      file: ../monitoring/monitoring-compose.yaml
+      service: alertmanager
   nut-exporter:
     extends:
       file: ../monitoring/monitoring-compose.yaml
