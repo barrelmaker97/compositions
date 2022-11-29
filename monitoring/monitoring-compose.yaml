@@ -5,6 +5,7 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
+    restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
@@ -18,11 +19,11 @@ services:
       GF_EXTERNAL_IMAGE_STORAGE_PROVIDER: "local"
     volumes:
       - "/volume1/docker/grafana:/var/lib/grafana"
-    restart: unless-stopped
 
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
+    restart: unless-stopped
     ports:
       - "9090:9090"
     volumes:
@@ -34,42 +35,41 @@ services:
       - "--web.console.libraries=/usr/share/prometheus/console_libraries"
       - "--web.console.templates=/usr/share/prometheus/consoles"
       - "--storage.tsdb.retention.time=90d"
-    restart: unless-stopped
 
   alertmanager:
     container_name: alertmanager
     image: prom/alertmanager
+    restart: unless-stopped
     ports:
       - "9093:9093"
     volumes:
       - "./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
     command:
       - "--config.file=/etc/alertmanager/alertmanager.yml"
-    restart: unless-stopped
 
   node-exporter:
     container_name: node-exporter
     image: prom/node-exporter
-    command:
-      - "--path.rootfs=/host"
+    restart: unless-stopped
     network_mode: host
     pid: host
-    restart: unless-stopped
     volumes:
       - "/:/host:ro"
+    command:
+      - "--path.rootfs=/host"
 
   nut-exporter:
     container_name: nut-exporter
     image: ghcr.io/barrelmaker97/nut-exporter:latest
+    restart: unless-stopped
     environment:
       UPS_HOST: "pollux.lan"
-    restart: unless-stopped
 
   kuma:
     container_name: kuma
     image: louislam/uptime-kuma:latest
+    restart: unless-stopped
     ports:
       - "3001:3001"
-    restart: unless-stopped
     volumes:
       - "/volume1/docker/kuma:/app/data"
