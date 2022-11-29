@@ -41,10 +41,10 @@ services:
     image: prom/alertmanager
     ports:
       - "9093:9093"
-#   volumes:
-#     - "./alertmanager.yml:/alertmanager.yml:ro"
-#   command:
-#     - "--config.file=/alertmanager.yml"
+    volumes:
+      - "./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
     restart: unless-stopped
 
   node-exporter:
