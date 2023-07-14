@@ -55,4 +55,4 @@ scrape_configs:
       - targets:
           - "factorio.barrelmaker.dev"
         labels:
-          server_name: "MotoFactorio4"
+          server_name: "Factorio"
