@@ -49,10 +49,6 @@ scrape_configs:
           - "niucraft.barrelmaker.dev"
         labels:
           server_name: "NIUCraft"
-      - targets:
-          - "motocraft.barrelmaker.dev"
-        labels:
-          server_name: "MotoCraft"
 
   - job_name: "factorio"
     static_configs:
