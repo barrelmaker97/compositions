@@ -53,6 +53,6 @@ scrape_configs:
   - job_name: "factorio"
     static_configs:
       - targets:
-          - "motofactorio4.barrelmaker.dev"
+          - "factorio.barrelmaker.dev"
         labels:
           server_name: "MotoFactorio4"
