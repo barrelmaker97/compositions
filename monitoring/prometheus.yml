@@ -38,11 +38,6 @@ scrape_configs:
       - targets:
           - "pollux.lan:9167"
 
-  - job_name: "friendbot"
-    static_configs:
-      - targets:
-          - "friendbot.barrelmaker.dev"
-
   - job_name: "minecraft"
     static_configs:
       - targets:
