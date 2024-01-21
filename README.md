@@ -46,7 +46,7 @@ Useful Docker Compose Commands:
 
 # License
 
-Copyright (c) 2022 Nolan Cooper
+Copyright (c) 2024 Nolan Cooper
 
 This composition collection is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
