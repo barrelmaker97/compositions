@@ -22,6 +22,7 @@ services:
       ServerIP: 192.168.15.30
       DNS1: "127.0.0.1#5335"
       DNS2: "127.0.0.1#5335"
+      RATE_LIMIT: "0/0"
     volumes:
       - "/home/barrelmaker/pihole/etc-pihole/:/etc/pihole/"
       - "/home/barrelmaker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/"
