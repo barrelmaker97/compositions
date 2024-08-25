@@ -18,10 +18,10 @@ services:
     extends:
       file: ../monitoring/monitoring-compose.yaml
       service: alertmanager
-  nut-exporter:
+  pistachio:
     extends:
       file: ../monitoring/monitoring-compose.yaml
-      service: nut-exporter
+      service: pistachio
   node-exporter:
     extends:
       file: ../monitoring/monitoring-compose.yaml

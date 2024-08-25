@@ -58,9 +58,9 @@ services:
     command:
       - "--path.rootfs=/host"
 
-  nut-exporter:
-    container_name: nut-exporter
-    image: ghcr.io/barrelmaker97/nut-exporter:latest
+  pistachio:
+    container_name: pistachio
+    image: ghcr.io/barrelmaker97/pistachio:latest
     restart: unless-stopped
     environment:
       UPS_HOST: "pollux.lan"
