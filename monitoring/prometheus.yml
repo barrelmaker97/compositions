@@ -33,11 +33,6 @@ scrape_configs:
       - targets:
           - "grafana:3000"
 
-  - job_name: "unbound"
-    static_configs:
-      - targets:
-          - "pollux.lan:9167"
-
   - job_name: "minecraft"
     static_configs:
       - targets:
