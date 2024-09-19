@@ -23,10 +23,10 @@ scrape_configs:
       - targets:
           - "localhost:9090"
 
-  - job_name: "nut"
+  - job_name: "pistachio"
     static_configs:
       - targets:
-          - "pistachio:9120"
+          - "pollux.lan:9120"
 
   - job_name: "grafana"
     static_configs:

@@ -58,13 +58,6 @@ services:
     command:
       - "--path.rootfs=/host"
 
-  pistachio:
-    container_name: pistachio
-    image: ghcr.io/barrelmaker97/pistachio:latest
-    restart: unless-stopped
-    environment:
-      UPS_HOST: "pollux.lan"
-
   kuma:
     container_name: kuma
     image: louislam/uptime-kuma:latest
