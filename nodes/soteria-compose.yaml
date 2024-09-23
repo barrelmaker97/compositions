@@ -3,9 +3,15 @@ version: "2"
 
 services:
   watchtower:
-    extends:
-      file: ../watchtower/watchtower-compose.yaml
-      service: watchtower
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      TZ: America/Chicago
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_POLL_INTERVAL: 3600
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: always
   grafana:
     extends:
       file: ../monitoring/monitoring-compose.yaml
