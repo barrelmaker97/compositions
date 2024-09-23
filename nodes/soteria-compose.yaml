@@ -36,7 +36,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - "./prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+      - "/volume1/docker/compositions/prometheus.yml:/etc/prometheus/prometheus.yml:ro"
       - "/volume1/docker/prometheus/prometheus:/prometheus"
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
@@ -52,7 +52,7 @@ services:
     ports:
       - "9093:9093"
     volumes:
-      - "./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
+      - "/volume1/docker/compositions/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
     command:
       - "--config.file=/etc/alertmanager/alertmanager.yml"
 
