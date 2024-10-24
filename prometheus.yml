@@ -34,6 +34,7 @@ scrape_configs:
           - "grafana:3000"
 
   - job_name: "minecraft"
+    scheme: https
     static_configs:
       - targets:
           - "niucraft.barrelmaker.dev"
@@ -41,6 +42,7 @@ scrape_configs:
           server_name: "NIUCraft"
 
   - job_name: "factorio"
+    scheme: https
     static_configs:
       - targets:
           - "factorio.barrelmaker.dev"
