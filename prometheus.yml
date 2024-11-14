@@ -37,6 +37,6 @@ scrape_configs:
     scheme: https
     static_configs:
       - targets:
-          - "niucraft.barrelmaker.dev"
+          - "metrics.niucraft.barrelmaker.dev"
         labels:
           server_name: "NIUCraft"
