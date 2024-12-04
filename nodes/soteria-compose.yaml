@@ -66,12 +66,3 @@ services:
       - "/:/host:ro"
     command:
       - "--path.rootfs=/host"
-
-  kuma:
-    container_name: kuma
-    image: louislam/uptime-kuma:latest
-    restart: unless-stopped
-    ports:
-      - "3001:3001"
-    volumes:
-      - "/volume1/docker/kuma:/app/data"
