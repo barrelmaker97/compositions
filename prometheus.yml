@@ -24,6 +24,7 @@ scrape_configs:
           - "localhost:9090"
 
   - job_name: "pistachio"
+    fallback_scrape_protocol: "PrometheusText0.0.4"
     static_configs:
       - targets:
           - "pollux.lan:9120"
