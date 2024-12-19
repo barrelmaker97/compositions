@@ -45,17 +45,6 @@ services:
       - "--web.console.templates=/usr/share/prometheus/consoles"
       - "--storage.tsdb.retention.time=90d"
 
-  alertmanager:
-    container_name: alertmanager
-    image: prom/alertmanager
-    restart: unless-stopped
-    ports:
-      - "9093:9093"
-    volumes:
-      - "/volume1/docker/compositions/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
-    command:
-      - "--config.file=/etc/alertmanager/alertmanager.yml"
-
   node-exporter:
     container_name: node-exporter
     image: prom/node-exporter
