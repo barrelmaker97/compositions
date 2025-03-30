@@ -18,14 +18,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      GF_SERVER_DOMAIN: "grafana.barrelmaker.dev"
-      GF_SERVER_ROOT_URL: "https://grafana.barrelmaker.dev"
-      GF_SERVER_ENFORCE_DOMAIN: "true"
-      GF_SERVER_ENABLE_GZIP: "true"
-      GF_SECURITY_COOKIE_SECURE: "true"
-      GF_SECURITY_COOKIE_SAMESITE: "strict"
+      GF_SERVER_DOMAIN: "grafana.soteria.lan"
+      GF_SERVER_ROOT_URL: "http://grafana.soteria.lan"
       GF_SECURITY_X_CONTENT_TYPE_OPTIONS: "false"
-      GF_EXTERNAL_IMAGE_STORAGE_PROVIDER: "local"
     volumes:
       - "/volume1/docker/grafana:/var/lib/grafana"
 
